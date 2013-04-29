@@ -1,0 +1,10 @@
+target/**/*
+
+# Java class files
+*.class
+
+# Mac OS X
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*

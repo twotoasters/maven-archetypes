@@ -10,11 +10,28 @@ To use an archetype:
       -Dpackage=org.example.toasted
 
     cd ToasterApp
-    mvn install
+    mvn clean install
     mvn android:deploy
-    mnv android:run
+    mvn android:run
 
-To update an archetype:
+Same for a Scala Android app:
+
+    mvn archetype:generate -DarchetypeCatalog=local \
+      -DarchetypeArtifactId=scala-app \
+      -DarchetypeGroupId=com.twotoasters \
+      -DgroupId=org.example \
+      -DartifactId=ToasterScalaApp \
+      -Dpackage=org.example.toasted
+
+    cd ToasterScalaApp
+    mvn clean install
+    mvn android:deploy
+    mvn android:run
+
+To update an archetype in your local maven repository:
 
     cd android-app
-    mvn install
+    mvn clean install
+
+    cd scala-app
+    mvn clean install

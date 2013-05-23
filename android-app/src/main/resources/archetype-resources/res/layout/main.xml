@@ -12,7 +12,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity">
 
-	<TextView  
+	<TextView
+        android:id="@+id/text_boom"
     	android:layout_width="wrap_content" 
     	android:layout_height="wrap_content" 
     	android:text="@string/hello"/>

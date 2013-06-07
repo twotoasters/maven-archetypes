@@ -11,6 +11,7 @@ import android.widget.TextView;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 
 import ${package}.R;
@@ -21,8 +22,9 @@ import ${package}.R;
     TextView boomText;
 
     @Before public void setUp() throws Exception {
-        activity = new MainActivity();
-        activity.onCreate(null);
+        activity = Robolectric.buildActivity(MainActivity.class)
+            .create()
+            .get();
         boomText = (TextView) activity.findViewById(R.id.text_boom);
     }
 

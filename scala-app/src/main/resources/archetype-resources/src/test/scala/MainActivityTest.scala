@@ -10,6 +10,7 @@ import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.robolectric.Robolectric
 import org.robolectric.RobolectricTestRunner
 
 @RunWith(classOf[RobolectricTestRunner])
@@ -19,8 +20,9 @@ class MainActivityTest {
     var boomText : TextView = null
 
     @Before def setup {
-        activity = new MainActivity
-        activity.onCreate(null)
+        activity = Robolectric.buildActivity(classOf[MainActivity])
+            .create()
+            .get();
         boomText = activity.findViewById(R.id.text_boom).asInstanceOf[TextView]
     }
 

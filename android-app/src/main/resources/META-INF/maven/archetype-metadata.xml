@@ -98,6 +98,7 @@
       <directory></directory>
       <includes>
         <include>AndroidManifest.xml</include>
+        <include>checkstyle.xml</include>
         <include>project.properties</include>
         <include>.gitignore</include>
       </includes>
